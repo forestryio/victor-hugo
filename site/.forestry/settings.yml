@@ -27,6 +27,5 @@ build:
   - HUGO_VERSION=0.55.2
   preview_output_directory: "../dist"
   output_directory: public
-  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
-    -d public
+  instant_preview_command: npm run build:forestry:preview
 version: 0.55.2
