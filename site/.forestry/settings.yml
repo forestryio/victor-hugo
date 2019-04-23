@@ -15,7 +15,7 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
-  preview_command: hugo -E -F -D -b $DEPLOY_URL -d dist
+  preview_command: nom run build:forestry:preview
   publish_command: hugo -d public
   preview_env:
   - HUGO_ENV=staging
@@ -24,7 +24,7 @@ build:
   publish_env:
   - HUGO_ENV=production
   - HUGO_VERSION=0.55.2
-  preview_output_directory: dist
+  preview_output_directory: "../dist"
   output_directory: public
   instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
     -d public
